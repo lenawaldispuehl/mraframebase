@@ -19,11 +19,11 @@
 	<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
 	<script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
 	<!-- include ar.js -->
-	<!-- <script src="js/vendor/aframe/build/aframe-ar.js"></script> -->
+	<script src="js/vendor/aframe/build/aframe-ar.js"></script>
 </head>
 
 <body>
-	<a-scene>
+	<a-scene embedded arjs='patternratio: 0.7'>
 
 		<a-assets>
 			<a-asset-item id="erde" src="/assets/erde.gltf"></a-asset-item>
@@ -36,6 +36,10 @@
 			<a-asset-item id="saturn" src="/assets/saturn.gltf"></a-asset-item>
 
 		</a-assets>
+
+
+		<a-marker preset="custom" type="pattern" url="patterns/1.patt">
+			
 
 		<!-- Erde -->
 		<a-entity position="0 0 0" rotation="0 0 0">
@@ -104,6 +108,8 @@
 		<!-- CAMERA -->
 		<a-camera camera position="0 0 0">
         </a-camera>
+
+        </a-marker>
 
 	</a-scene>
 
